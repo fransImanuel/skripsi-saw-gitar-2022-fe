@@ -55,7 +55,7 @@ function ChooseForm() {
     async function FetchGuitarByCriteria(){
         
         const res = await fetch(
-                `https://skripsi-saw-gitar-2022-be.herokuapp.com/get/guitarbyfilter?WoodWeight=`+formData.WoodType+
+                `http://localhost:5000/get/guitarbyfilter?WoodWeight=`+formData.WoodType+
                 `&GuitarSizeWeight=`+formData.GuitarSize+
                 `&BrandWeight=`+formData.PriceWeight+
                 `&Price=`+formData.BrandWeight+

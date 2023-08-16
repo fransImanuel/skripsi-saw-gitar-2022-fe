@@ -14,7 +14,7 @@ export default function AllResultPage() {
     const [guitars, setGuitars] = useState();
     useEffect(() => {
 
-        axios.get('https://skripsi-saw-gitar-2022-be.herokuapp.com/get/allguitar')
+        axios.get('http://localhost:5000/get/allguitar')
         .then((res) => {
             // console.log(res.data);
             setGuitars(res.data.data)

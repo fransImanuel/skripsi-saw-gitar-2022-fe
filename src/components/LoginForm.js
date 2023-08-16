@@ -36,7 +36,7 @@ function LoginForm() {
     }
 
     async function FetchLoginData(){
-        axios.post('https://skripsi-saw-gitar-2022-be.herokuapp.com/login', {
+        axios.post('http://localhost:5000/login', {
             Username: formData.Username,
             Password: formData.Password
         })

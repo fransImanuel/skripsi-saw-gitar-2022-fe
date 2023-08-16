@@ -14,7 +14,7 @@ export default function AdminRoute() {
   const [guitars, setGuitars] = useState();
   let modalContent
   useEffect(() => {
-    axios.get('https://skripsi-saw-gitar-2022-be.herokuapp.com/get/gitarforadmin')
+    axios.get('http://localhost:5000/get/gitarforadmin')
     .then((res) => {
         // console.log(res.data);
         setGuitars(res.data.data)
@@ -250,7 +250,7 @@ function EditModal(props) {
     }
     console.log("isi body");
     console.log(body);
-    axios.put(`https://skripsi-saw-gitar-2022-be.herokuapp.com/updateguitar/`+event.target[0].value,body)
+    axios.put(`http://localhost:5000/updateguitar/`+event.target[0].value,body)
     .then((res) => {
       console.log(res);
       if (res.status !== 200) {
@@ -519,7 +519,7 @@ function AddModal(props) {
     }
     console.log("isi body");
     console.log(body);
-    axios.post(`https://skripsi-saw-gitar-2022-be.herokuapp.com/addguitar`,body)
+    axios.post(`http://localhost:5000/addguitar`,body)
     .then((res) => {
       console.log(res);
       if (res.status !== 200) {
@@ -753,7 +753,7 @@ function DeleteModal(props) {
     console.log(event);
     console.log(id);
 
-    axios.delete(`https://skripsi-saw-gitar-2022-be.herokuapp.com/deleteguitar/`+id)
+    axios.delete(`http://localhost:5000/deleteguitar/`+id)
     .then((res) => {
       console.log(res);
       if (res.status !== 200) {
